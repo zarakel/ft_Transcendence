@@ -1,0 +1,45 @@
+.game_screen {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 10px;
+}
+
+.game_menu {
+	text-align: center;
+	outline: 2px solid white;
+	border-radius: 20px;
+	width: 50%;
+}
+
+.game_img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 50%;
+}
+
+.game_loading {
+	text-align: center;
+	outline: 2px solid white;
+	border-radius: 20px;
+	width: 50%;
+}
+
+.game {
+	width: 50%;
+}
+
+.game_canvas {
+	//border-radius: 10px;
+	border: solid 1px white;  
+	width: 100%;
+	height: 100%;
+	touch-action: none;
+}
+
+.game_msg {
+	color: white;
+	margin: 5%;
+}

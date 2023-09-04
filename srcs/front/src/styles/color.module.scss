@@ -1,0 +1,20 @@
+.modernbutton {
+	background-color: #ffffff; /* Couleur de fond */
+	border: none; /* Pas de bordure */
+	color: rgb(0, 0, 0); /* Couleur de texte */
+	padding: 5px 5px; /* Espacement du texte */
+	text-align: center; /* Alignement du texte */
+	text-decoration: none; /* Pas de soulignement */
+	display: inline-block; /* Afficher en ligne */
+	font-size: 16px; /* Taille de police */
+	font-weight: 500; /* Gras */
+	margin: 4px 2px; /* Marge */
+	cursor: pointer; /* Curseur pointer au survol */
+	border-radius: 4px; /* Coins arrondis */
+	transition-duration: 0.4s; /* Durée de transition */
+  }
+  
+  .modernbutton:hover {
+	background-color: #b0aaaa; /* Changement de couleur au survol */
+  }
+  

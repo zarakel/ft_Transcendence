@@ -1,0 +1,47 @@
+version: "3.9"
+    
+services:
+  nestjs:
+    container_name: nestjs
+    build: ./srcs/back
+    image: nestjs
+    env_file: ./srcs/.env
+    depends_on:
+      - postgresql
+    ports:
+      - 3000:3000
+    networks:
+      - transcendence
+    restart: unless-stopped
+
+  react:
+    container_name: react
+    build: ./srcs/front/
+    image: react
+    env_file: ./srcs/.env
+    depends_on:
+      - postgresql
+      - nestjs
+    ports:
+      - 80:80
+    networks:
+      - transcendence
+    restart: unless-stopped
+
+  postgresql:
+    container_name: postgresql
+    image: postgres
+    networks:
+      - transcendence
+    environment:
+      POSTGRES_PASSWORD: toto
+      POSTGRES_USER: toto
+      POSTGRES_DB: transcendence
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+
+networks:
+  transcendence:
+    name: transcendence
+    driver: bridge
